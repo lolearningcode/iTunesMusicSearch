@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumTableCell" rowHeight="80" id="vkE-kr-WuD" customClass="AlbumTableCell" customModule="ItunesApp827" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vkE-kr-WuD" id="jgN-QH-Xl7">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-cR-baR">
+                        <rect key="frame" x="8" y="7" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="wbd-cR-baR" secondAttribute="height" multiplier="1:1" id="MsQ-rY-XRD"/>
+                            <constraint firstAttribute="height" constant="64" id="RFV-ym-oJP"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Og2-bv-Zhc">
+                        <rect key="frame" x="80" y="11" width="285" height="42.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb7-jR-zSZ">
+                                <rect key="frame" x="0.0" y="0.0" width="285" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-31-lLi">
+                                <rect key="frame" x="0.0" y="24.5" width="285" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Og2-bv-Zhc" secondAttribute="trailing" constant="10" id="5jY-V5-KXs"/>
+                    <constraint firstItem="wbd-cR-baR" firstAttribute="leading" secondItem="jgN-QH-Xl7" secondAttribute="leading" constant="8" id="HTD-8X-CbX"/>
+                    <constraint firstItem="Og2-bv-Zhc" firstAttribute="top" secondItem="jgN-QH-Xl7" secondAttribute="top" constant="11" id="QUZ-cs-A7t"/>
+                    <constraint firstItem="wbd-cR-baR" firstAttribute="top" secondItem="jgN-QH-Xl7" secondAttribute="top" constant="7" id="XvV-VL-3LW"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Og2-bv-Zhc" secondAttribute="bottom" constant="10" id="da7-mI-GKU"/>
+                    <constraint firstItem="Og2-bv-Zhc" firstAttribute="leading" secondItem="wbd-cR-baR" secondAttribute="trailing" constant="8" id="lDa-9b-aRB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumImage" destination="wbd-cR-baR" id="e39-QE-d7j"/>
+                <outlet property="albumMainLabel" destination="Wb7-jR-zSZ" id="8CV-h9-ZXc"/>
+                <outlet property="albumSubLabel" destination="pVX-31-lLi" id="JoF-BL-WEZ"/>
+            </connections>
+            <point key="canvasLocation" x="144.80000000000001" y="104.34782608695653"/>
+        </tableViewCell>
+    </objects>
+</document>
